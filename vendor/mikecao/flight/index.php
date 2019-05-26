@@ -39,7 +39,7 @@ function emailExists($email){
 }
 
 //Register database connection
-Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=sssd','root',''),
+Flight::register('db', 'PDO', array('mysql:host=ibu-db-server.adnan.dev;dbname=db_almin_p','almin-p','YKX9r7kr'),
   function($db){
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
