@@ -162,7 +162,7 @@
         event.preventDefault();
 
         var request = $.ajax({
-          url: "./vendor/mikecao/flight/login",
+          url: "rest/login",
           type: "POST",
           data: $(this).serialize(),
           cache: false,

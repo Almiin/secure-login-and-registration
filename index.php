@@ -189,7 +189,7 @@
         event.preventDefault();
 
         var request = $.ajax({
-          url: "./vendor/mikecao/flight/register",
+          url: "rest/register",
           type: "POST",
           data: $(this).serialize(),
           cache: false,

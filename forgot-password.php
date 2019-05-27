@@ -124,7 +124,7 @@
         event.preventDefault();
 
         var request = $.ajax({
-          url: "./vendor/mikecao/flight/forgotPassword",
+          url: "rest/forgotPassword",
           type: "POST",
           data: $(this).serialize(),
           cache: false,

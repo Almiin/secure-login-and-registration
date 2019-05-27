@@ -155,7 +155,7 @@
                 event.preventDefault();
 
                 var request = $.ajax({
-                url: "../vendor/mikecao/flight/googleAuth",
+                url: "../rest/googleAuth",
                 type: "POST",
                 data: $(this).serialize(),
                 cache: false,
