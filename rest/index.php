@@ -117,6 +117,9 @@ Flight::route('POST /login', function(){
     if($rows > 0) {
       if(password_verify($pass, $rows['password'])){
         $msg['status'] = "match";
+        $_SESSION['luser'] = $rows['username'];
+        $_SESSION['start'] = time();
+        $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
         $_SESSION['count'] = 0;
       } else {
         $msg['status'] = "notMatch";
@@ -125,9 +128,6 @@ Flight::route('POST /login', function(){
         if($_SESSION['count'] >= 5) {
             if(isset(Flight::request()->data['g-recaptcha-response']) && !empty (Flight::request()->data['g-recaptcha-response'])){
             include '../captcha.php';
-            $_SESSION['luser'] = $rows['username'];
-            $_SESSION['start'] = time();
-            $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
             $_SESSION['count'] = 0;
           } else {
             $msg['status'] = 'captcha';
