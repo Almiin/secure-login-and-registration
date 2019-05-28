@@ -5,8 +5,6 @@
 
     $phone = $_SESSION['phone'];
 
-    echo $phone;
-
     $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
     $message = $client->message()->send([
         'to' => $phone ,
@@ -14,9 +12,9 @@
         'text' => 'Ljubi mino bebu svoju!'
     ]);
     
-    //$ch = curl_init($message);
-    //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //$response = curl_exec($ch);
+    $ch = curl_init($message);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
 
     if (!isset($_SESSION['luser'])) {
         header('Location: ../login.php');
