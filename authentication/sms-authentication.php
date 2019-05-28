@@ -9,7 +9,7 @@
     
     try {
         $message = $client->message()->send([
-            'to' => '38762717498',
+            'to' => '$phone',
             'from' => 'Nexmo',
             'text' => 'Ljubi mino bebu svoju!'
         ]);
