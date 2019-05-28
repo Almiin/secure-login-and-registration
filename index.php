@@ -116,7 +116,7 @@
                   name="phone"
                   data-toggle="tooltip"
                   data-placement="right"
-                  title="Example: '062/111-222'"
+                  title="Example: '38762123321'"
                   aria-describedby="materialRegisterFormPhoneHelpBlock"
                 />
                 <label for="phone">Phone number</label>

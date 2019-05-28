@@ -17,7 +17,7 @@
         $response = $message->getResponseData();
         
         if($response['messages'][0]['status'] == 0) {
-            echo "The message was sent successfully\n";
+            echo "The message with code was sent successfully\n";
         } else {
             echo "The message failed with status: " . $response['messages'][0]['status'] . "\n";
         }
