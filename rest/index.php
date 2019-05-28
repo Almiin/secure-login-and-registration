@@ -207,7 +207,7 @@ Flight::route('POST /register', function() {
         $msg['status'] = 'invalidEmail';  
       } elseif(strlen($pass) < 6 || !preg_match("#[0-9]+#",$pass) || !preg_match("#[A-Z]+#", $pass) || !preg_match($pattern, $pass)){
         $msg['status'] = 'passwordErr';
-      }  elseif($pass != $rpass){
+      } elseif($pass != $rpass){
         $msg['status'] = 'notSame';
       } else {
         //Register user
