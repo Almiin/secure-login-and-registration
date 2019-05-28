@@ -49,6 +49,24 @@ Flight::route('POST /googleAuth', function(){
   session_start();
   $code = Flight::request()->data->code;
   $msg = array();
+  $rand = $_SESSION['code'];
+  if(strlen($code) < 6 || strlen($code) > 6) {
+    $msg['status'] = "codeLength";
+  } else {
+    if(!($rand == $code)){
+      $msg['status'] = 'notMatch';
+    } else {
+      $msg['status'] = 'match';
+    }
+  }
+  
+  echo json_encode($msg);
+});
+
+Flight::route('POST /googleAuth', function(){
+  session_start();
+  $code = Flight::request()->data->code;
+  $msg = array();
   $otp = $_SESSION['otp'];
   if(strlen($code) < 6 || strlen($code) > 6) {
     $msg['status'] = "codeLength";
