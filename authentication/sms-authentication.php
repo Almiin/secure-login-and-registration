@@ -4,6 +4,7 @@
     require_once "../vendor/autoload.php";
 
     $phone = $_SESSION['phone'];
+    $code = "123321";
 
     $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
     
@@ -11,7 +12,7 @@
         $message = $client->message()->send([
             'to' => $phone,
             'from' => 'Nexmo',
-            'text' => 'Ljubi mino bebu svoju!'
+            'text' => 'Your code is' . $code 
         ]);
 
         $response = $message->getResponseData();
