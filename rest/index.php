@@ -45,7 +45,7 @@ Flight::register('db', 'PDO', array('mysql:host=ibu-db-server.adnan.dev;dbname=d
   }
 );
 
-Flight::route('POST /googleAuth', function(){
+Flight::route('POST /smsAuth', function(){
   session_start();
   $code = Flight::request()->data->code;
   $msg = array();
