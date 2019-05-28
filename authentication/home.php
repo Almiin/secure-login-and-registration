@@ -44,7 +44,7 @@
                 <div class="col-6 mx-auto">
                     <div class="jumbotron text-center">
                         <p>Choose two factor authentication: </p>
-                        <a class="btn btn-primary btn-sx" href="">SMS</a>
+                        <a class="btn btn-primary btn-sx" href="sms-authentication.php">SMS</a>
                         <a class="btn btn-primary btn-xs" href="generated-code.php">App-Generated Codes</a>
                     </div>
                     <div class="text-center">

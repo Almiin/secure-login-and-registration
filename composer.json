@@ -1,6 +1,7 @@
 {
     "require": {
         "mikecao/flight": "^1.3",
-        "spomky-labs/otphp": "^9.1"
+        "spomky-labs/otphp": "^9.1",
+        "nexmo/client": "^1.8"
     }
 }
