@@ -7,7 +7,7 @@
 
     $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
     $message = $client->message()->send([
-        'to' => '$phone',
+        'to' => '38762717498',
         'from' => 'Nexmo',
         'text' => 'Ljubi mino bebu svoju!'
     ]);
