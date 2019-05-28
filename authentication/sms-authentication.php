@@ -6,15 +6,24 @@
     $phone = $_SESSION['phone'];
 
     $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
-    $message = $client->message()->send([
-        'to' => '38762717498',
-        'from' => 'Nexmo',
-        'text' => 'Ljubi mino bebu svoju!'
-    ]);
     
-    $ch = curl_init($message);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
+    try {
+        $message = $client->message()->send([
+            'to' => '38762717498',
+            'from' => 'Nexmo',
+            'text' => 'Ljubi mino bebu svoju!'
+        ]);
+
+        $response = $message->getResponseData();
+        
+        if($response['messages'][0]['status'] == 0) {
+            echo "The message was sent successfully\n";
+        } else {
+            echo "The message failed with status: " . $response['messages'][0]['status'] . "\n";
+        }
+    } catch (Exception $e) {
+        echo "The message was not sent. Error: " . $e->getMessage() . "\n";
+    }
 
     if (!isset($_SESSION['luser'])) {
         header('Location: ../login.php');
