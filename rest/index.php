@@ -81,8 +81,6 @@ Flight::route('POST /forgotPassword', function(){
   echo json_encode($msg);
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**
    * @OA\Post(
    *     path="/login",
@@ -100,10 +98,6 @@ Flight::route('POST /forgotPassword', function(){
    * )
 */
 
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /login', function(){
   session_start();
 
@@ -123,8 +117,6 @@ Flight::route('POST /login', function(){
     if($rows > 0) {
       if(password_verify($pass, $rows['password'])){
         $msg['status'] = "match";
-<<<<<<< HEAD
-<<<<<<< HEAD
         $_SESSION['count'] = 0;
       } else {
         $msg['status'] = "notMatch";
@@ -141,23 +133,6 @@ Flight::route('POST /login', function(){
             $msg['status'] = 'captcha';
           }
         }
-=======
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-        if(isset(Flight::request()->data['g-recaptcha-response']) && !empty (Flight::request()->data['g-recaptcha-response'])){
-          include '../captcha.php';
-          $_SESSION['luser'] = $rows['username'];
-          $_SESSION['start'] = time();
-          $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
-         } else {
-          $msg['status'] = 'captcha';
-        }
-      } else {
-        $msg['status'] = "notMatch";
-<<<<<<< HEAD
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
       }
     } else {
       $msg['status'] = "notExists";
@@ -168,8 +143,6 @@ Flight::route('POST /login', function(){
 
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**
      * @OA\Post(
      *     path="/register",
@@ -188,10 +161,6 @@ Flight::route('POST /login', function(){
      * )
      */
 
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /register', function() {
   
     $conn = Flight::db();

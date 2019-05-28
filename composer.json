@@ -1,15 +1,6 @@
 {
     "require": {
         "mikecao/flight": "^1.3",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "spomky-labs/otphp": "^9.1",
-        "zircote/swagger-php": "^3.0"
-=======
         "spomky-labs/otphp": "^9.1"
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
-        "spomky-labs/otphp": "^9.1"
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
     }
 }

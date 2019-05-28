@@ -14,15 +14,7 @@
 ?>
             <!-- From here all HTML coding can be done -->
             <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h2>Welcome
-=======
-                Welcome
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
-                Welcome
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
                 <?php
                     echo $_SESSION['luser'];
                     echo '<br />';

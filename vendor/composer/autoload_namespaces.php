@@ -6,11 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 );

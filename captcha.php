@@ -2,15 +2,7 @@
 
 $post_data = http_build_query(
     array(
-<<<<<<< HEAD
-<<<<<<< HEAD
         'secret' => "6LfYZKIUAAAAAIGH_j8j2oCm1szUtIcRQoIkh43u",
-=======
-        'secret' => "6Lelp6UUAAAAAGCEkQzUhj_t0KyQZOHtjPQy2eNS",
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
-=======
-        'secret' => "6Lelp6UUAAAAAGCEkQzUhj_t0KyQZOHtjPQy2eNS",
->>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
         'response' => $_POST['g-recaptcha-response'],
         'remoteip' => $_SERVER['REMOTE_ADDR']
     )
