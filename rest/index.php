@@ -81,6 +81,29 @@ Flight::route('POST /forgotPassword', function(){
   echo json_encode($msg);
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**
+   * @OA\Post(
+   *     path="/login",
+   *     tags={"login"},
+   *     summary="Login to the app",
+   *     @OA\Response(
+   *         response="default",
+   *         description="successful operation"
+   *     ),
+   *     @OA\RequestBody(
+   *         description="Create user object",
+   *         required=true,
+   *         @OA\JsonContent(ref="#/components/schemas/LoginRequest")
+   *     )
+   * )
+*/
+
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /login', function(){
   session_start();
 
@@ -100,6 +123,27 @@ Flight::route('POST /login', function(){
     if($rows > 0) {
       if(password_verify($pass, $rows['password'])){
         $msg['status'] = "match";
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $_SESSION['count'] = 0;
+      } else {
+        $msg['status'] = "notMatch";
+        $_SESSION['count'];
+        $_SESSION['count']++;
+        if($_SESSION['count'] >= 5) {
+            if(isset(Flight::request()->data['g-recaptcha-response']) && !empty (Flight::request()->data['g-recaptcha-response'])){
+            include '../captcha.php';
+            $_SESSION['luser'] = $rows['username'];
+            $_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
+            $_SESSION['count'] = 0;
+          } else {
+            $msg['status'] = 'captcha';
+          }
+        }
+=======
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
         if(isset(Flight::request()->data['g-recaptcha-response']) && !empty (Flight::request()->data['g-recaptcha-response'])){
           include '../captcha.php';
           $_SESSION['luser'] = $rows['username'];
@@ -110,6 +154,10 @@ Flight::route('POST /login', function(){
         }
       } else {
         $msg['status'] = "notMatch";
+<<<<<<< HEAD
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
       }
     } else {
       $msg['status'] = "notExists";
@@ -120,6 +168,30 @@ Flight::route('POST /login', function(){
 
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**
+     * @OA\Post(
+     *     path="/register",
+     *     tags={"register"},
+     *     summary="Register user",
+     *     description="Register user",
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     ),
+     *     @OA\RequestBody(
+     *         description="Create user",
+     *         required=true,
+     *         @OA\JsonContent(ref="#/components/schemas/registerRequest")
+     *     )
+     * )
+     */
+
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /register', function() {
   
     $conn = Flight::db();

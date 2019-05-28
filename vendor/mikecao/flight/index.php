@@ -1,6 +1,21 @@
 <?php
 require 'flight/Flight.php';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+Flight::route('GET /', function() {
+  echo "";
+});
+=======
 use OTPHP\TOTP;
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+use OTPHP\TOTP;
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 
 function userExists($username){
   $conn = Flight::db();
@@ -39,12 +54,25 @@ function emailExists($email){
 }
 
 //Register database connection
+<<<<<<< HEAD
+<<<<<<< HEAD
+Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=sssd','root',''),
+=======
 Flight::register('db', 'PDO', array('mysql:host=ibu-db-server.adnan.dev;dbname=db_almin_p','almin-p','YKX9r7kr'),
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+Flight::register('db', 'PDO', array('mysql:host=ibu-db-server.adnan.dev;dbname=db_almin_p','almin-p','YKX9r7kr'),
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
   function($db){
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
 );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /googleAuth', function(){
   session_start();
   $code = Flight::request()->data->code;
@@ -120,6 +148,10 @@ Flight::route('POST /login', function(){
 
 });
 
+<<<<<<< HEAD
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
 Flight::route('POST /register', function() {
   
     $conn = Flight::db();

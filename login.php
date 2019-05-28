@@ -81,11 +81,25 @@
                 <label for="pass">Password</label>
               </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div  class="d-flex justify-content-around">
+                <div>
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LfYZKIUAAAAAP3E7USduOV0AQLz-bBkCgmI97bT"
+=======
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
               <div class="d-flex justify-content-around">
                 <div>
                   <div
                     class="g-recaptcha"
                     data-sitekey="6Lelp6UUAAAAAJKRo4Xp-Ye4CSl1GpjzRBjw3tGX"
+<<<<<<< HEAD
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
+=======
+>>>>>>> a18e3940f176f72af91046ba889aa2f0bcf9973e
                   ></div>
                 </div>
               </div>
