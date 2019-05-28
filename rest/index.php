@@ -118,6 +118,7 @@ Flight::route('POST /login', function(){
       if(password_verify($pass, $rows['password'])){
         $msg['status'] = "match";
         $_SESSION['luser'] = $rows['username'];
+        $_SESSION['phone'] = $rows['phone_number'];
         $_SESSION['start'] = time();
         $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
         $_SESSION['count'] = 0;

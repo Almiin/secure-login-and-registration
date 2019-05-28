@@ -3,19 +3,20 @@
 
     require_once "../vendor/autoload.php";
 
-    $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
+    $phone = $_SESSION['phone'];
 
+    echo $phone;
+
+    $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('b4992586', 'lks3RzZJ5vyvos6q'));
     $message = $client->message()->send([
-        'to' => 38762717498 ,
+        'to' => $phone ,
         'from' => 'Nexmo',
-        'text' => 'Test message from the Nexmo PHP Client'
+        'text' => 'Ljubi mino bebu svoju!'
     ]);
     
-    $ch = curl_init($message);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-
-    var_dump($response);
+    //$ch = curl_init($message);
+    //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //$response = curl_exec($ch);
 
     if (!isset($_SESSION['luser'])) {
         header('Location: ../login.php');
